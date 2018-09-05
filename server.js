@@ -115,7 +115,7 @@ const updateUsername = function() {
     })
 }
 
-const findMarkAndDelete = function() {
+/*const findMarkAndDelete = function() {
     // find specific user and delete
     return User.findOne({ username: 'Mark_the_boy' })
         .then(function(user) {
@@ -143,19 +143,19 @@ const findBennyAndRemove = function() {
                 console.log('User successfully deleted');
             });
         });
-}
+}*/
 
 Promise.all([kenny.save(), mark.save(), benny.save()])
     .then(findAllUsers)
     .then(findSpecificRecord)
     .then(updadeUserPassword)
     .then(updateUsername)
-    .then(findMarkAndDelete)
+   /* .then(findMarkAndDelete)
     .then(findKennyAndDelete)
-    .then(findBennyAndRemove)
+    .then(findBennyAndRemove)*/
     .catch(console.log.bind(console))
 
-    const express = require('express')
+ /*   const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
@@ -164,4 +164,4 @@ express()
 .set('views', path.join(__dirname, 'views'))
 .set('view engine', 'ejs')
 .get('/', (req, res) => res.render('pages/index'))
-.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+.listen(PORT, () => console.log(`Listening on ${ PORT }`))*/
